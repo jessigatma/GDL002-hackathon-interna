@@ -1,4 +1,6 @@
-/*window.movies = {
+//elena key 691df107
+
+window.movies = {
 
     randomImageMovie: function(movies){ //peliculas debe ser un array
         
@@ -9,6 +11,14 @@
     }
 
 
-}*/
+}
+//work in progress
+function filterGenre(data){
+	for(let i = 0; i < data.length; i++){
+			for(let j = 0; j < data[i].Genre.length; i++){
+			data[i].Genre
+				
+			}
 
-
+	}
+}

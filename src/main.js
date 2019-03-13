@@ -18,5 +18,5 @@ function getArr (arr) {
         return arrMovies
 }
 
- console.log(getArr(drama));
+ console.log(getArr(mistery));
 
