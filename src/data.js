@@ -1,3 +1,4 @@
+
 //elena key 691df107
 const mistery =  ["tt0482571", "tt0209144", "tt0120689", "tt1130884", "tt0114814", "tt0167404", "tt2267998", "tt1201607", "tt0440963"];
 
@@ -22,4 +23,15 @@ const drama = ["tt0111161", "tt0468569", "tt0137523", "tt0110912", "tt0109830", 
 
 
 
+window.movies = {
 
+    randomImageMovie: function(movies){ //peliculas debe ser un array
+        
+        const recomendedMovies= movies.length;
+        let aleatorio=Math.round(Math.random()*(recomendedMovies-1));
+        let randomMovies = movies[aleatorio];
+        return randomMovies;
+    }
+
+
+}
