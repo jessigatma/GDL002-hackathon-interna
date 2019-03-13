@@ -1,4 +1,7 @@
 window.movies = {
+    showMovie: function() {
+
+    },
 
     randomImageMovie: function(movies) { //peliculas debe ser un array
 
