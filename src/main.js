@@ -10,6 +10,8 @@ for (let i = 0; i < arrMovies.length; i++) {
         return data.json();
     }).then((dataAsJSON) => {
         movies[i] = dataAsJSON;
+        console.log(dataAsJSON);
+        
     });
 }
 
@@ -29,7 +31,6 @@ function getArr (arr) {
         return arrMovies
 }
 
- console.log(getArr(romance));
 
 function showMovie(arrDrama) {
     arrDrama.forEach(element => {

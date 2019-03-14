@@ -1,6 +1,4 @@
 window.movies = {
-
-
         randomImageMovie: function(movies) { //peliculas debe ser un array
 
             const recomendedMovies = movies.length;
