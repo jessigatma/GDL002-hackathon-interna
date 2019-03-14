@@ -1,10 +1,7 @@
 /* @import url() */
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+
+
 
 body {
     margin: 0;
@@ -20,12 +17,24 @@ header {
     width: 100%;
     height: 12.5em;
     /*1em es 16px*/
+=======
+    background: linear-gradient(to bottom, white, rgb(255, 0, 0));
+    background-repeat: no-repeat;
+    font-family: 'Bebas neue', sans-serif;
+    /* border : 1px solid red; */
+}
+
+header {
+    border: 1px solid black;
+    width: 100px;
+    height: 12.5em;
     background-image: url(images/cine.png);
     position: absolute;
     top: 0%;
     left: 0;
     align-content: center;
     z-index: 100;
+
     display: flex;
 }
 
@@ -33,4 +42,43 @@ header {
     header {
 
     }
+
+}
+
+#select {
+    margin: left;
+    width: 600px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav li a {
+    background-color: royalblue;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 50px;
+    display: block;
+}
+
+.nav li a:hover {
+    background-color: cadetblue;
+}
+
+.nav>li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.nav li:hover>ul {
+    display: block;
+
 }
