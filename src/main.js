@@ -17,7 +17,6 @@ for (let i = 0; i < arrMovies.length; i++) {
 function showMovie(arrDrama) {
     arrDrama.forEach(element => {
         document.getElementById("movieRandom").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
-
     });
 }
 document.getElementById("movieRandom").addEventListener("load", showMovie(arrDrama))
