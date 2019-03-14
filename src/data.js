@@ -1,5 +1,3 @@
-//elena key 691df107
-
 window.movies = {
 
 
@@ -10,15 +8,7 @@ window.movies = {
             let randomMovies = movies[aleatorio];
             return randomMovies;
         }
-
-    }
-    //work in progress
-function filterGenre(data) {
-    for (let i = 0; i < data.length; i++) {
-        for (let j = 0; j < data[i].Genre.length; i++) {
-            data[i].Genre
-
-        }
-
-    }
 }
+
+
+
