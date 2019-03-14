@@ -15,4 +15,19 @@ window.movies = {
 }
 
 
+const genre = ["Drama", "Action", "Crime", "Thriller", "Romance", "Adventure", "Fantasy", "Sci-Fi"];
+//work in progress
+function filterGenre(data, genre){
+	const filterMovies = [];
+	for(let i = 0; i < data.length; i++){
+			//for(let j = 0; j < data[i].Genre.length; j++){
+			if(data[i].Genre.search(genre) > -1){
+				console.log(data[i]);
+				filterMovies.push(data[i]);
+			}	
+				
+			//}
+	}
+return filterMovies;
+}
 
