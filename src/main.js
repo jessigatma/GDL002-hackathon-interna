@@ -14,6 +14,23 @@ for (let i = 0; i < arrMovies.length; i++) {
 }
 
 
+
+function getArr (arr) {
+
+    // const arrMovies = [];
+            for(let i = 0; i < arr.length; i++){
+                fetch('http://www.omdbapi.com/?i=' + arr[i] + '&apikey=691df107').then( (data) => {
+                return data.json();
+                }).then((dataAsJSON) => {
+                arrMovies[i] = dataAsJSON;
+                console.log(dataAsJSON)
+                });
+            }
+        return arrMovies
+}
+
+ console.log(getArr(romance));
+
 function showMovie(arrDrama) {
     arrDrama.forEach(element => {
         document.getElementById("movieRandom").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
@@ -25,3 +42,4 @@ document.getElementById("movieRandom").addEventListener("load", showMovie(arrDra
 function home() {
     location.reload();
 }
+
