@@ -1,4 +1,4 @@
-window.movies = {
+window.movies1 = {
 
 
         randomImageMovie: function(movies) { //peliculas debe ser un array
