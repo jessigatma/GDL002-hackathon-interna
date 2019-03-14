@@ -13,27 +13,24 @@ for (let i = 0; i < arrMovies.length; i++) {
     });
 }
 
-//console.log(movies);
-
 function showMovie(arrAlternativeMovies) {
     arrAlternativeMovies.forEach(element => {
-        document.getElementById("movieRandom").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
+        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
 
     });
 }
-document.getElementById("movieRandom").addEventListener("load", showMovie(arrAlternativeMovies))
+document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
 
 function home() {
     location.reload();
 }
-
-
-
-   
-    /*const recomendedMovies = arrAlternativeMovies.length;
+function showRecomendation(){
+    const recomendedMovies = arrAlternativeMovies.length;
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
     let randomMovies = arrAlternativeMovies[aleatorio];
     let newMovie=randomMovies.Poster
-    console.log(newMovie);
-   */
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
+}
+showRecomendation();
    
+ 
