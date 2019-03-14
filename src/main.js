@@ -13,12 +13,30 @@ const arrMovies =  ["tt0482571", "tt0209144", "tt0120689", "tt1130884", "tt01148
         }
       
 
+
+function getArr (arr) {
+
+    // const arrMovies = [];
+            for(let i = 0; i < arr.length; i++){
+                fetch('http://www.omdbapi.com/?i=' + arr[i] + '&apikey=691df107').then( (data) => {
+                return data.json();
+                }).then((dataAsJSON) => {
+                arrMovies[i] = dataAsJSON;
+                console.log(dataAsJSON)
+                });
+            }
+        return arrMovies
+}
+
+ console.log(getArr(romance));
+
 function showMovie(arrDrama) {
     arrDrama.forEach(element => {
         console.log(element.Title)
         return arrDrama
     });
 }
+
 
 
 console.log(showMovie(arrDrama))
