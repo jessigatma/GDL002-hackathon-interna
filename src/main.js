@@ -18,4 +18,12 @@ function getArr(arr) {
     return arrMovies
 }
 
-console.log(getArr(mistery));
+function showMovie(arrDrama) {
+    arrDrama.forEach(element => {
+        console.log(element.Title)
+        return arrDrama
+    });
+}
+
+
+console.log(showMovie(arrDrama))
