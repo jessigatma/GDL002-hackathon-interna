@@ -1,11 +1,7 @@
 //elena key 691df107
 
 window.movies = {
-        showMovie: function(arrMovies) {
-            arrMovies.forEach(element => {
-                console.log(element[0])
-            });
-        },
+
 
         randomImageMovie: function(movies) { //peliculas debe ser un array
 

@@ -20,10 +20,12 @@ function getArr(arr) {
 
 function showMovie(arrDrama) {
     arrDrama.forEach(element => {
-        console.log(element.Title)
-        return arrDrama
+        document.getElementById("movieRandom").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
+
     });
 }
+document.getElementById("movieRandom").addEventListener("load", showMovie(arrDrama))
 
-
-console.log(showMovie(arrDrama))
+function home() {
+    location.reload();
+}
