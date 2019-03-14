@@ -1,26 +1,36 @@
 /* @import url() */
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
-    background: linear-gradient(to bottom, white,rgb(255, 0, 0));
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, white,rgb(168, 168, 168));
     background-repeat: no-repeat;
     font-family:'Bebas neue', sans-serif;
-    /* border : 1px solid red; */
+    border : 1px solid blue;
 }
 
 header {
     border : 1px solid black;
-    width: 100px;
-    /* height: 160px; */
+    width: 100%;
+    height: 12.5em;
+    /*1em es 16px*/
     background-image: url(images/cine.png);
     position: absolute;
     top: 0%;
     left: 0;
     align-content: center;
     z-index: 100;
+    display: flex;
+}
+
+@media only screen and (max-width:768px) {
+    header {
+
+    }
 }

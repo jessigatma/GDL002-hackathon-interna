@@ -7,16 +7,17 @@ const arrMovies = [];
 
 function getArr (arr) {
 
-    const arrMovies = [];
+    // const arrMovies = [];
             for(let i = 0; i < arr.length; i++){
                 fetch('http://www.omdbapi.com/?i=' + arr[i] + '&apikey=691df107').then( (data) => {
                 return data.json();
                 }).then((dataAsJSON) => {
                 arrMovies[i] = dataAsJSON;
+                console.log(dataAsJSON)
                 });
             }
         return arrMovies
 }
 
- console.log(getArr(drama));
+ console.log(getArr(romance));
 
