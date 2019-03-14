@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-window.movies1 = {
-
-=======
->>>>>>> b678a1f8f966b1544e39c8b09989a1be2a059e0c
-
 window.dataMovies = {
       
         randomImageMovie: function(movies) { //peliculas debe ser un array
