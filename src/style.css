@@ -11,6 +11,7 @@ body {
 
 img {
     width: 100%;
+
 }
 
 .select {
@@ -76,3 +77,5 @@ ol {
 .button-home:hover {
     border-color: #E43D14;
 }
+
+

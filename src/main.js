@@ -19,7 +19,9 @@ function showMovie(arrDrama) {
         document.getElementById("movieRandom").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
     });
 }
-document.getElementById("movieRandom").addEventListener("load", showMovie(arrDrama))
+document.getElementById("movieRandom").addEventListener("load", showMovie(arrDrama));
+
+document.getElementById("btnAfr").addEventListener("click", filterCountry());
 
 function home() {
     location.reload();
