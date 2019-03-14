@@ -11,14 +11,14 @@ const arrMovies =  ["tt0482571", "tt0209144", "tt0120689", "tt1130884", "tt01148
             movies[i] = dataAsJSON;
             });
         }
-      
-
-function showMovie(arrDrama) {
-    arrDrama.forEach(element => {
-        console.log(element.Title)
-        return arrDrama
+      console.log(movies);
+/*
+function showMovie(data) {
+    data.forEach(element => {
+        //console.log(element.Title)
+        return data
     });
 }
+*/
 
-
-console.log(showMovie(arrDrama))
+//console.log(showMovie(arrDrama))
