@@ -1,3 +1,4 @@
+
 window.dataMovies = {
       
         randomImageMovie: function(movies) { //peliculas debe ser un array
