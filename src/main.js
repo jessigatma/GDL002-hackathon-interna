@@ -12,13 +12,3 @@ const arrMovies =  ["tt0482571", "tt0209144", "tt0120689", "tt1130884", "tt01148
             });
         }
       console.log(movies);
-/*
-function showMovie(data) {
-    data.forEach(element => {
-        //console.log(element.Title)
-        return data
-    });
-}
-*/
-
-//console.log(showMovie(arrDrama))
