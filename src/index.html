@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <title>The best Classic Movies</title>
+    <title>Alternative Movies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -13,6 +13,12 @@
 </header>
 
 <body>
+    <div class="flex-container">
+        <div id = "movieRandom" class= "flex-item"></div>
+
+
+        <div id="lateralInfo" class="flex-item"></div>
+    </div>
 
     <h1> 
         Would you like to know a different movie? <br>
@@ -33,6 +39,8 @@
    
 
 
+
+<section>
         <ul class="nav">
             <li><a href="">Country Search</a>
                 <ul>
@@ -51,15 +59,15 @@
                 </ul>
             </li>
         </ul>
-    </div>
-    <div id="movieRandomList" class="random">
-    </div>
-      
+
+</section>
+
     
-    <button id="home" onclick="home()" class="button-home"><img src= "https://lh3.googleusercontent.com/4Fd7hdy5HONPRzsMYsEBIwKuBKG4t6weQeMwMsaELtNKDgjgN-e_bKSkZioFttJ-WEeqYDm6KiO5DpoVN8VX7SSMz7z1hvdpxutktDzY8USqUgxxbOxDk_g6BOoFmEjUiscIbTMMQHzojyNeDNpRfBingDvo7xYerhlbS-BxFYlFt0Lupl3KnFCGkJBgbcz6v4VGivzOojL4U_79mdJhH5fnmB_UpCjLBFAmf0LT_LeyJRTnI1_ADEvmR82c2i3g35JlkMK5cWu8pogyKOo7FVDYhT9Yb_tWJ65kijLwz82GLbSNe1bT0TX5ZPWSD2tnBhRKwNRKVZ2EcBa8x4E7ukT4pBPj6QIQr4fGU15ZTp1oUNe_uv7E6AjzspW6VJl5DYtn8z2x-SEbISR7B9EswRy-vFvHDLoaWQz8rA1CSHAMk3aiEqlxcZZMD27Y3rhTMKHm-xYe1OYxttdOuKKNFyxGodQZdy2fZquw_YXah_u42ejAlM-rb4JidlztPH8w356ktBB1EUvNFZmkffW6AtPoPVB8TTCBIWC-mslVLeFZ12hj1uPf7wnRD4HzX_IddxuNIhJ1iO0quD1ylpnKt2dX6tpcWjJup3VqjBKXCmOQVdOtVRMHi4Py5Kzkm0hXinwZK6zYDD0g2IaxlaOc_l-oWXmbIXXRM8PNYITtpXNB8zDMNVai_UgqALiiU1HYe9SrMedq0O3DX53L=s517-no"/>
-    </button>
-   
-    
+<section id="movieRandomList" class="random"> </section>
+
+<button id="home" onclick="home()" class="button-home"><img id = "btn-home" src= "https://lh3.googleusercontent.com/4Fd7hdy5HONPRzsMYsEBIwKuBKG4t6weQeMwMsaELtNKDgjgN-e_bKSkZioFttJ-WEeqYDm6KiO5DpoVN8VX7SSMz7z1hvdpxutktDzY8USqUgxxbOxDk_g6BOoFmEjUiscIbTMMQHzojyNeDNpRfBingDvo7xYerhlbS-BxFYlFt0Lupl3KnFCGkJBgbcz6v4VGivzOojL4U_79mdJhH5fnmB_UpCjLBFAmf0LT_LeyJRTnI1_ADEvmR82c2i3g35JlkMK5cWu8pogyKOo7FVDYhT9Yb_tWJ65kijLwz82GLbSNe1bT0TX5ZPWSD2tnBhRKwNRKVZ2EcBa8x4E7ukT4pBPj6QIQr4fGU15ZTp1oUNe_uv7E6AjzspW6VJl5DYtn8z2x-SEbISR7B9EswRy-vFvHDLoaWQz8rA1CSHAMk3aiEqlxcZZMD27Y3rhTMKHm-xYe1OYxttdOuKKNFyxGodQZdy2fZquw_YXah_u42ejAlM-rb4JidlztPH8w356ktBB1EUvNFZmkffW6AtPoPVB8TTCBIWC-mslVLeFZ12hj1uPf7wnRD4HzX_IddxuNIhJ1iO0quD1ylpnKt2dX6tpcWjJup3VqjBKXCmOQVdOtVRMHi4Py5Kzkm0hXinwZK6zYDD0g2IaxlaOc_l-oWXmbIXXRM8PNYITtpXNB8zDMNVai_UgqALiiU1HYe9SrMedq0O3DX53L=s517-no"/></button>
+
+
     <script src="data.js"></script>
     <script src="alternativemovies.js"></script>
     <script src="main.js"></script>
