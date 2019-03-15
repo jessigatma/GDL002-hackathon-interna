@@ -33,11 +33,21 @@ function showMovie(data) {
     });
 
 }
-document.getElementById("btn1").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
+document.getElementById("btnAll").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
 
-function selectMexico() {
+function selectCountry(Country) {
     document.getElementById("movieRandomList").innerHTML = "";
-    const result = dataMovies.filterCountry(arrAlternativeMovies, "Mexico");
+    const result = dataMovies.filterCountry(arrAlternativeMovies, Country);
     showMovie(result);
 }
-document.getElementById("btn2").addEventListener("click", selectMexico);
+document.getElementById("btnMex").addEventListener("click", function() { selectCountry("Mexico") });
+document.getElementById("btnUsa").addEventListener("click", function() { selectCountry("USA") });
+document.getElementById("btnVen").addEventListener("click", function() { selectCountry("Venezuela") });
+document.getElementById("btnFr").addEventListener("click", function() { selectCountry("France") });
+document.getElementById("btnSpa").addEventListener("click", function() { selectCountry("Spain") });
+document.getElementById("btnIt").addEventListener("click", function() { selectCountry("Italy") });
+document.getElementById("btnChi").addEventListener("click", function() { selectCountry("China") });
+document.getElementById("btnIndia").addEventListener("click", function() { selectCountry("India") });
+document.getElementById("btnJp").addEventListener("click", function() { selectCountry("Japan") });
+document.getElementById("btnEgy").addEventListener("click", function() { selectCountry("Egypt") });
+document.getElementById("btnSaf").addEventListener("click", function() { selectCountry("South Africa") });
