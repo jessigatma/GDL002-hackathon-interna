@@ -20,7 +20,8 @@ function showRecomendation(){
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
     let randomMovies = arrAlternativeMovies[aleatorio];
     let newMovie=randomMovies.Poster
-    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list'>" + "<img id= 'first-poster' src = '" + newMovie + "' />" +  "</div>";
+    document.getElementById("lateralInfo").innerHTML = "<div class='text'>" + "Title:"+" "+ randomMovies.Title + "<br>"+ "Year:"+" "+randomMovies.Year +"<br>" + "Plot:"+" "+randomMovies.Plot+"<br>" + "Runtime:"+" "+ randomMovies.Runtime +"<br>"+ "Country:"+" "+randomMovies.Country + "</div>";
 }
 showRecomendation();
 
@@ -72,3 +73,10 @@ document.getElementById("movieRandomList").addEventListener("load", showMovie(ar
 // function home() {
 //     location.reload();
 // }
+   
+
+
+const america =  arrAlternativeMovies.filter(pais => pais.Country.includes("Mexico"));
+
+console.log(america);
+
