@@ -55,12 +55,11 @@ h2{
 #poster {
     width: 100%;
     position: relative;
-
 }
 
 .select {
     margin: left;
-    width: 1500px;
+    width: 600px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
 
@@ -79,11 +78,11 @@ ol {
 
 
 .nav li a:hover {
-    background-color: cadetblue;
+    background-color: #8296d1;
 }
 
 .nav>li {
-    float: right;
+    float: left;
 }
 
 .nav li ul {
@@ -124,4 +123,3 @@ ol {
 #btn-home{
     width: 100%;
 }
-
