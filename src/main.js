@@ -13,14 +13,6 @@ for (let i = 0; i < arrMovies.length; i++) {
     });
 }
 
-function showMovie(arrAlternativeMovies) {
-    arrAlternativeMovies.forEach(element => {
-        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
-
-    });
-}
-document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
-
 function home() {
     location.reload();
 }
@@ -33,3 +25,19 @@ function showRecomendation() {
     document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
 }
 showRecomendation();
+
+function showMovie(data) {
+    data.forEach(element => {
+        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
+
+    });
+
+}
+document.getElementById("btn1").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
+
+function selectMexico() {
+    document.getElementById("movieRandomList").innerHTML = "";
+    const result = dataMovies.filterCountry(arrAlternativeMovies, "Mexico");
+    showMovie(result);
+}
+document.getElementById("btn2").addEventListener("click", selectMexico);
