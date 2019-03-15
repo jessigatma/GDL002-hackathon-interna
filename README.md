@@ -1,64 +1,53 @@
 # "Hackathon" de final de _Common Core_, películas
 
-## Índice
+## Planning 
 
-- [Preámbulo](#preámbulo)
-- [Resumen del proyecto](#resumen-del-proyecto)
-- [Consideraciones generales](#consideraciones-generales)
-- [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-- [Parte obligatoria](#parte-obligatoria)
-- [Consideraciones técnicas](#consideraciones-técnicas)
+0.1 crear carpetas en el repo
+	se considera hecho cuando exista html, css, index.js, data.js
+0.2 Crear documento html 
+	Se considera hecho cuando el html tiene estructura de página con el título de la página y el texto de recomendación del día con <main> contenido </main>
 
----
+## Historias de Usuario
 
-## Preámbulo
+1. El usuario necesita ver dentro de la pantalla el título de la página y un texto que le indique la recomedación del día 
 
-Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Amazon Prime Video, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por palomitas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
+2. El usuario puede ver la imagen y una breve descripción de la película recomendada al inicio de la página
 
-![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+3. En la parte inferior de la página el usuario debe ver un select chickearlo y elegir un país
 
-## Resumen del proyecto
+4. Al hacer click en el país seleccionado se mostrarán las películas mejor rankeadas. Se muestra el género seleccionado en la parte superior
 
-Durante estos días crearás el producto que quieras alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en algún servicio de streaming, uno de recomendaciones de películas de terror,
-comedia ... o... ¡lo que quieran!
+5. Al posicionar cursor sobre la imágen se despliega un hover con la información de la película: 
+-título
+-sinopsis
+-ranking
+-premio
+-duración
 
-## Consideraciones generales
 
-- Este proyecto se debe resolver en equipos de hasta 4 personas y uno de 3.
-- Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-- Tiempo para completar el reto: 3 días.
-- Habrán dos presentaciones, una a la mitad de la _hackathon_ y otra al final.
+## Lista de tarea pequeña
 
-## Objetivos de aprendizaje
+1. jalar la data de películas
+1.1 función que filtra por raking mayor a..90
+2. hacer una función que toma los datos y les aplica random
+3. función mostrar en html
+4. hacer un select en html con distintos generos 4, con funcion que despliegue pero aun sin filtrar
+5. funcion que filtre por genero seleccionado
+6. función que muestre en el html las 12 imágenes de las peliculas mejor rankeadas de los resultados filtrados.
+7. generar el hover con la información de cada película
+8. hacer un botón de home
+9. hacer la función de limpiar el apartado de resultados
 
-- Enfrentarte a un reto de corta duración en el que pongas
-  en práctica todo lo aprendido hasta ahora.
-- Que sigas desarrollando tus habilidades de trabajo en equipo. Mientras más
-  personas en un equipo de trabajo, mayor complejidad para: tener un
-  entendimiento común, seguir el flujo de trabajo, buscar consensos, etc.
+## Research
 
-## Parte Obligatoria
+Nos enfocamos en un usuario el cual disfruta de películas que no son el top de popularidad de lo que encontrarás en cartelera local (México) disfruta cine extranjero, películas culturales y tiene curiosidad por el cine sin ser un conocedor experto, su rango de edad sería 18 - 35, aunque cualquiera que tenga la curiosidad e inquietud de realizar busquedas por país podría ser ese usuario. 
 
-- Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-  por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
-  y las inspiraciones utilizadas para definir el producto.
-- Además, deberás detallar en el archivo _readme_, qué hizo cada una en el
-  proyecto.
-- El producto deberá presentarse publicado en github pages.
 
-## Consideraciones técnicas
+En la búsqueda que realizamos nos llevó a la conclusión de que hace falta alguna plataforma o catalogo que nos de acceso a información de este tipo de películas que no necesariamente encontraríamos en cartelera pero que exista la opción realizar una busqueda por país
 
-- El diseño visual de los componentes es de libre elección.
-- Pueden usar algún framework de css si así lo deciden.
 
-## Sobre las presentaciones
+## Sketches
 
-- Cada squad tendrá 5 minutos para presentar y 5 minutos para recibir preguntas.
+Prototipo de alta fildelidad 01
 
-- Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
+https://www.figma.com/file/cKV5Jds7KWk2mdlOjCXoPofB/movie?node-id=0%3A1
