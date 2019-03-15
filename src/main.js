@@ -28,6 +28,7 @@ showRecomendation();
 
 function showMovie(data) {
     data.forEach(element => {
+
         document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
 
     });
@@ -36,7 +37,10 @@ function showMovie(data) {
 document.getElementById("btnAll").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
 
 function selectCountry(Country) {
+    const txtcountry = Country;
+    console.log(txtcountry);
     document.getElementById("movieRandomList").innerHTML = "";
+    document.getElementById("movieRandomList").innerHTML = `<h3>You have chosen ${txtcountry}</h3>`
     const result = dataMovies.filterCountry(arrAlternativeMovies, Country);
     showMovie(result);
 }
