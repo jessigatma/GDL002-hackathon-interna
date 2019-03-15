@@ -11,17 +11,17 @@ for (let i = 0; i < arrMovies.length; i++) {
     }).then((dataAsJSON) => {
         movies[i] = dataAsJSON;
         // console.log(dataAsJSON);
-        
+
     });
 }
 
-function showRecomendation(){
+function showRecomendation() {
     const recomendedMovies = arrAlternativeMovies.length;
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
     let randomMovies = arrAlternativeMovies[aleatorio];
-    let newMovie=randomMovies.Poster
-    document.getElementById("movieRandom").innerHTML = "<div id= 'list'>" + "<img id= 'first-poster' src = '" + newMovie + "' />" +  "</div>";
-    document.getElementById("lateralInfo").innerHTML = "<div class='text'>" + "Title:"+" "+ randomMovies.Title + "<br>"+ "Year:"+" "+randomMovies.Year +"<br>" + "Plot:"+" "+randomMovies.Plot+"<br>" + "Runtime:"+" "+ randomMovies.Runtime +"<br>"+ "Country:"+" "+randomMovies.Country + "</div>";
+    let newMovie = randomMovies.Poster
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list'>" + "<img id= 'first-poster' src = '" + newMovie + "' />" + "</div>";
+    document.getElementById("lateralInfo").innerHTML = "<div class='text'>" + "Title:" + " " + randomMovies.Title + "<br>" + "Year:" + " " + randomMovies.Year + "<br>" + "Plot:" + " " + randomMovies.Plot + "<br>" + "Runtime:" + " " + randomMovies.Runtime + "<br>" + "Country:" + " " + randomMovies.Country + "</div>";
 }
 showRecomendation();
 
@@ -31,6 +31,7 @@ function home() {
 
 function showMovie(data) {
     data.forEach(element => {
+
         document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
 
     });
@@ -39,7 +40,10 @@ function showMovie(data) {
 document.getElementById("btnAll").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
 
 function selectCountry(Country) {
+    const txtcountry = Country;
+    console.log(txtcountry);
     document.getElementById("movieRandomList").innerHTML = "";
+    document.getElementById("movieRandomList").innerHTML = `<h3>You have chosen ${txtcountry}</h3>`
     const result = dataMovies.filterCountry(arrAlternativeMovies, Country);
     showMovie(result);
 }
@@ -54,8 +58,3 @@ document.getElementById("btnIndia").addEventListener("click", function() { selec
 document.getElementById("btnJp").addEventListener("click", function() { selectCountry("Japan") });
 document.getElementById("btnEgy").addEventListener("click", function() { selectCountry("Egypt") });
 document.getElementById("btnSaf").addEventListener("click", function() { selectCountry("South Africa") });
-
-
-
-
-   
