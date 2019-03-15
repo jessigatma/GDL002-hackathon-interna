@@ -80,7 +80,7 @@ document.getElementById("btnSpa").addEventListener("click", function() { selectC
 document.getElementById("btnIt").addEventListener("click", function() { selectCountry("Italy") });
 document.getElementById("btnChi").addEventListener("click", function() { selectCountry("China") });
 document.getElementById("btnIndia").addEventListener("click", function() { selectCountry("India") });
-document.getElementById("btnJp").addEventListener("click", function() { selectCountry("Japan") });
+//document.getElementById("btnJp").addEventListener("click", function() { selectCountry("Japan") });
 document.getElementById("btnEgy").addEventListener("click", function() { selectCountry("Egypt") });
 document.getElementById("btnSaf").addEventListener("click", function() { selectCountry("South Africa") });
 
