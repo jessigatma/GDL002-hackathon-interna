@@ -39,22 +39,22 @@ ol {
     background-color: rgb(24, 92, 175);
     color: #fff;
     text-decoration: none;
-    padding: 8px 50px;
+    padding: 1rem 2rem;
     display: block;
 }
 
 .nav li a:hover {
-    background-color: cadetblue;
+    background-color: #8296d1;
 }
 
 .nav>li {
-    float: right;
+    float: left;
 }
 
 .nav li ul {
     display: none;
     position: absolute;
-    min-width: 140px;
+    min-width: 1.4rem;
 }
 
 .nav li:hover>ul {
@@ -63,13 +63,11 @@ ol {
 
 .movies {
     display: inline-block;
-    width: 200px;
     max-width: 200px;
     padding: 6px;
     margin: 10px;
     text-align: center;
     background-color: #EFF0F1;
-    border: none;
 }
 
 .button-home {

@@ -15,17 +15,6 @@ for (let i = 0; i < arrMovies.length; i++) {
     });
 }
 
-function showMovie(arrAlternativeMovies) {
-    arrAlternativeMovies.forEach(element => {
-        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
-
-    });
-}
-document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
-
-function home() {
-    location.reload();
-}
 function showRecomendation(){
     const recomendedMovies = arrAlternativeMovies.length;
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
@@ -34,5 +23,52 @@ function showRecomendation(){
     document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
 }
 showRecomendation();
-   
- 
+
+
+// function showMovie(arrAlternativeMovies) {
+//     arrAlternativeMovies.forEach(element => {
+//         document.getElementById("movieRandomList").innerHTML += 
+//         "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
+//     });
+// }
+// document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
+
+
+function showMovie(arrAlternativeMovies) {
+    movieCard(arrAlternativeMovies);
+}
+
+function movieCard (data){
+    document.getElementById("movieRandomList").innerHTML= `
+    <h1> Éstos son algunos titulos que podrías revisar: (${data.length} resultados)</h1>
+    ${data.map(showInfoCard).join("")}`
+}
+
+function showInfoCard(movie){ 
+    //create a template that will show the objet movie data
+    return `
+    <div class ='movies'>
+        <div class="preview-card">
+        <img src="${movie.Poster}">
+        <h2>${movie.Title.toUpperCase()}</h2>
+        //nombre de la pelicula
+    </div>
+
+    <div class="info-card">
+    <h3> Title </h3> ${movie.Title} <br>
+    <h3> Year </h3>${movie.Year} <br>
+    <h3> Director </h3>${movie.Director} <br>
+    <h3> Country </h3>${movie.Country} <br>
+    <h3> Awards </h3>${movie.Awards}<br>
+    <h3> Runtime </h3>${movie.Runtime}<br>
+    <h3> Synopsis </h3>${movie.Plot}<br>
+    </div> 
+`;
+}
+
+document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
+
+
+// function home() {
+//     location.reload();
+// }
