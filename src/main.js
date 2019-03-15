@@ -17,7 +17,7 @@ for (let i = 0; i < arrMovies.length; i++) {
 
 function showMovie(arrAlternativeMovies) {
     arrAlternativeMovies.forEach(element => {
-        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
+        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img id= 'poster' src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
 
     });
 }
@@ -32,11 +32,16 @@ function showRecomendation(){
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
     let randomMovies = arrAlternativeMovies[aleatorio];
     let newMovie=randomMovies.Poster
-    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" +  "</div>";
-    document.getElementById("lateralInfo").innerHTML = "<p>" +  randomMovies.Title + randomMovies.Year + randomMovies.Plot + randomMovies.Runtime + randomMovies.Country + "<p>";
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list'>" + "<img id= 'first-poster' src = '" + newMovie + "' />" +  "</div>";
+    document.getElementById("lateralInfo").innerHTML = "<div class='text'>" + "Title:"+" "+ randomMovies.Title + "<br>"+ "Year:"+" "+randomMovies.Year +"<br>" + "Plot:"+" "+randomMovies.Plot+"<br>" + "Runtime:"+" "+ randomMovies.Runtime +"<br>"+ "Country:"+" "+randomMovies.Country + "</div>";
 }
 showRecomendation();
 
 
    
- 
+
+
+const america =  arrAlternativeMovies.filter(pais => pais.Country.includes("Mexico"));
+
+console.log(america);
+
