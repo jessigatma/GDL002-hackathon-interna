@@ -10,6 +10,8 @@ for (let i = 0; i < arrMovies.length; i++) {
         return data.json();
     }).then((dataAsJSON) => {
         movies[i] = dataAsJSON;
+        // console.log(dataAsJSON);
+        
     });
 }
 

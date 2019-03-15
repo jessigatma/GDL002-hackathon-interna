@@ -1,12 +1,22 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+header {
+    background-image:  url(images/cine.png);
+    /* border:  1px solid black; */
+    width: 100%;
+    height: 12rem;
+}
+
 body {
-    color: #0F58A2;
-    font-family: 'Francois One', sans-serif;
+    background: linear-gradient(to bottom right,#8E98AB, white);
+    background-repeat: no-repeat;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 aside{
     border: 1px black solid;
@@ -18,11 +28,11 @@ img {
 
 }
 
-.select {
+/* .select {
     margin: left;
     width: 1500px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+} */
 
 ul,
 ol {
@@ -30,7 +40,7 @@ ol {
 }
 
 .nav li a {
-    background-color: royalblue;
+    background-color: rgb(24, 92, 175);
     color: #fff;
     text-decoration: none;
     padding: 8px 50px;
