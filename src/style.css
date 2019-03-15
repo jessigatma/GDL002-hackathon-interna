@@ -72,7 +72,7 @@ ol {
     background-color: rgb(24, 92, 175);
     color: #fff;
     text-decoration: none;
-    padding: 8px 50px;
+    padding: 1rem 2rem;
     display: block;
 }
 
@@ -88,23 +88,69 @@ ol {
 .nav li ul {
     display: none;
     position: absolute;
-    min-width: 140px;
+    min-width: 1.4rem;
 }
 
 .nav li:hover>ul {
     display: block;
 }
 
-.movies {
-    display: inline-block;
+
+
+#movieRandomList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 3px;
+    
+}
+
+
+.movies{
+    overflow: hidden;
+    height: 320px;
     width: 200px;
-    max-width: 200px;
-    padding: 6px;
-    margin: 10px;
     text-align: center;
     background-color: #EFF0F1;
-    border: none;
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: small;
+    align-self: center;
 }
+
+/* .preview-card img {
+    max-width: 200px;
+    display: flex;
+} */
+
+
+
+.movies:hover .preview-card{
+    opacity: 0;
+}
+
+.preview-card{
+    border: 1px solid red;
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+    position: absolute;
+    height: 320px;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+
+}
+
 .button-home {
     padding: 10px;
     max-width: 50px;
