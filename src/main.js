@@ -10,21 +10,24 @@ for (let i = 0; i < arrMovies.length; i++) {
         return data.json();
     }).then((dataAsJSON) => {
         movies[i] = dataAsJSON;
+        // console.log(dataAsJSON);
+        
     });
 }
+
+function showRecomendation(){
+    const recomendedMovies = arrAlternativeMovies.length;
+    let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
+    let randomMovies = arrAlternativeMovies[aleatorio];
+    let newMovie=randomMovies.Poster
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list'>" + "<img id= 'first-poster' src = '" + newMovie + "' />" +  "</div>";
+    document.getElementById("lateralInfo").innerHTML = "<div class='text'>" + "Title:"+" "+ randomMovies.Title + "<br>"+ "Year:"+" "+randomMovies.Year +"<br>" + "Plot:"+" "+randomMovies.Plot+"<br>" + "Runtime:"+" "+ randomMovies.Runtime +"<br>"+ "Country:"+" "+randomMovies.Country + "</div>";
+}
+showRecomendation();
 
 function home() {
     location.reload();
 }
-
-function showRecomendation() {
-    const recomendedMovies = arrAlternativeMovies.length;
-    let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
-    let randomMovies = arrAlternativeMovies[aleatorio];
-    let newMovie = randomMovies.Poster
-    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
-}
-showRecomendation();
 
 function showMovie(data) {
     data.forEach(element => {
@@ -55,3 +58,8 @@ document.getElementById("btnIndia").addEventListener("click", function() { selec
 document.getElementById("btnJp").addEventListener("click", function() { selectCountry("Japan") });
 document.getElementById("btnEgy").addEventListener("click", function() { selectCountry("Egypt") });
 document.getElementById("btnSaf").addEventListener("click", function() { selectCountry("South Africa") });
+
+
+
+
+   

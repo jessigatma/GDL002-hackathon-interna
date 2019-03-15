@@ -1,23 +1,67 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("https://www.nocreasnada.com/wp-content/uploads/2019/01/2019-01-07_5c32f165baa6e_cine-2.jpg") color: #0F58A2;
-    font-family: 'Francois One', sans-serif;
+header {
+    background-image:  url(images/cine.png);
+    /* border:  1px solid black; */
+    width: 100%;
+    height: 12rem;
 }
 
-img {
+body {
+    background: linear-gradient(to bottom right,#8E98AB, white);
+    background-repeat: no-repeat;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1{
+   text-align: center; 
+}
+h2{
+    padding-top: 1%;
+    text-align: center;
+    position: relative;
+}
+
+.flex-container {
+  padding: 1% 1% 1% 1%;
+  margin: 1% 20% 1% 20%;
+  background-color: #EFF0F1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: 2em;
+}
+
+
+.text{
+    margin: 1% 1% 1% 1%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}*/
+#first-poster{
+    width: 90%
+}
+
+#poster {
     width: 100%;
+    position: relative;
 }
 
 .select {
     margin: left;
     width: 600px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+} 
 
 ul,
 ol {
@@ -25,15 +69,16 @@ ol {
 }
 
 .nav li a {
-    background-color: royalblue;
+    background-color: rgb(24, 92, 175);
     color: #fff;
     text-decoration: none;
     padding: 8px 50px;
     display: block;
 }
 
+
 .nav li a:hover {
-    background-color: cadetblue;
+    background-color: #8296d1;
 }
 
 .nav>li {
@@ -60,7 +105,6 @@ ol {
     background-color: #EFF0F1;
     border: none;
 }
-
 .button-home {
     padding: 10px;
     max-width: 50px;
@@ -75,4 +119,7 @@ ol {
 
 .button-home:hover {
     border-color: #E43D14;
+}
+#btn-home{
+    width: 100%;
 }
