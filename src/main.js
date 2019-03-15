@@ -29,28 +29,13 @@ function home() {
     location.reload();
 }
 
-function showMovie(data) {
-    data.forEach(element => {
-        document.getElementById("movieRandomList").innerHTML += "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
-
-
-// function showMovie(arrAlternativeMovies) {
-//     arrAlternativeMovies.forEach(element => {
-//         document.getElementById("movieRandomList").innerHTML += 
-//         "<div id= 'list' class ='movies'>" + "<img src = '" + element.Poster + "' />" + " " + element.Year + " " + element.Title + "</div>";
-//     });
-// }
-// document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
-
-
 function showMovie(arrAlternativeMovies) {
     movieCard(arrAlternativeMovies);
 }
 
 function movieCard (data){
     document.getElementById("movieRandomList").innerHTML= `
-    <h1> Éstos son algunos titulos que podrías revisar: (${data.length} resultados)</h1><br>
-    ${data.map(showInfoCard).join("")}`
+    <h1>These are some movies that you can watch: (${data.length}results)</h1>${data.map(showInfoCard).join("")}`
 }
 
 function showInfoCard(movie){ 
@@ -75,24 +60,17 @@ function showInfoCard(movie){
 `;
 }
 
-document.getElementById("movieRandomList").addEventListener("load", showMovie(arrAlternativeMovies))
+  
 
-
-// function home() {
-//     location.reload();
-// }
-   
-
-    });
-
-
-}
 document.getElementById("btnAll").addEventListener("click", function() { showMovie(arrAlternativeMovies) });
 
 function selectCountry(Country) {
+    const txtcountry = Country;
     document.getElementById("movieRandomList").innerHTML = "";
+    document.getElementById("movieRandomList").innerHTML = `<h3>You have chosen ${txtcountry}</h3>`;
     const result = dataMovies.filterCountry(arrAlternativeMovies, Country);
-    showMovie(result);
+    movieCard(result);
+    //showMovie(result);
 }
 document.getElementById("btnMex").addEventListener("click", function() { selectCountry("Mexico") });
 document.getElementById("btnUsa").addEventListener("click", function() { selectCountry("USA") });
