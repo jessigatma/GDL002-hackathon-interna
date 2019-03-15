@@ -8,6 +8,10 @@ body {
     color: #0F58A2;
     font-family: 'Francois One', sans-serif;
 }
+aside{
+    border: 1px black solid;
+    right: 200px;
+    position: absolute}
 
 img {
     width: 100%;
@@ -77,5 +81,4 @@ ol {
 .button-home:hover {
     border-color: #E43D14;
 }
-
 

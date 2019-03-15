@@ -24,13 +24,17 @@ document.getElementById("movieRandomList").addEventListener("load", showMovie(ar
 function home() {
     location.reload();
 }
+
 function showRecomendation(){
     const recomendedMovies = arrAlternativeMovies.length;
     let aleatorio = Math.round(Math.random() * (recomendedMovies - 1));
     let randomMovies = arrAlternativeMovies[aleatorio];
     let newMovie=randomMovies.Poster
-    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" + " " + randomMovies.Year + " " + randomMovies.Title + "</div>";
+    document.getElementById("movieRandom").innerHTML = "<div id= 'list' class ='movies'>" + "<img src = '" + newMovie + "' />" +  "</div>";
+    document.getElementById("lateralInfo").innerHTML = "<p>" +  randomMovies.Title + randomMovies.Year + randomMovies.Plot + randomMovies.Runtime + randomMovies.Country + "<p>";
 }
 showRecomendation();
+
+
    
  
